@@ -1,11 +1,6 @@
-Delete `␍`eslintprettier/prettier
-Unexpected var, use let or const instead.eslintno-var
-Delete `␍`eslintprettier/prettier
-Expected '===' and instead saw '=='.eslinteqeqeq
-Delete `␍`eslintprettier/prettier
-'c' is not defined.eslintno-undef
-Unary operator '++' used.eslintno-plusplus
-Delete `␍`eslintprettier/prettier
-Delete `␍`eslintprettier/prettier
-Return statement should not contain assignment.eslintno-return-assign
+no-var
+eqeqeq
+no-undef
+no-plusplus
+no-return-assign
 
