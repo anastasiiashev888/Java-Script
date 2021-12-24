@@ -1,7 +1,7 @@
 const n = 7;
-// eslint-disable-next-line prefer-const
 let sum = '';
-for (let i = 1; i <= n; i += 1) {
+for (let i = 1; i <= n; i++) {
   sum += String(i);
 }
+
 console.log(sum);
