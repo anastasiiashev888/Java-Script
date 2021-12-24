@@ -4,4 +4,4 @@ for (let i = 0; i <= n; i++) {
   sum += String(i);
 }
 
-console.log(sum);
+console.log(String(sum));
