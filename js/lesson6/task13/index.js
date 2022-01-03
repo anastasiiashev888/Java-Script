@@ -2,7 +2,7 @@ function withdraw(clients, balances, client, amount) {
   let output = 0;
 
   for (let i = 0; i < clients.length; i += 1) {
-    if (clients[i] === client && balances[i] >= amount) {
+    if ((clients[i] === client) & (balances[i] >= amount)) {
       output = balances[i] - amount;
     } else if (clients[i] === client && balances[i] < amount) {
       output = -1;
