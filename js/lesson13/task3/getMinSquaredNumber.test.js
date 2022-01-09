@@ -1,11 +1,11 @@
 import { getMinSquaredNumber } from './getMinSquaredNumber.js';
 
-it('get null due to empty array', () => {
+it('get null because of empty array', () => {
   const min = getMinSquaredNumber([]);
   expect(min).toEqual(null);
 });
 
-it('get null due to string', () => {
+it('get null because of string', () => {
   const min = getMinSquaredNumber('string');
   expect(min).toEqual(null);
 });
