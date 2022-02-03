@@ -1,15 +1,18 @@
-export const getTitle = () => {
+export function getTitle() {
   return document.querySelector('.title').textContent;
-};
-export const getDescription = () => {
+}
+
+export function getDescription() {
   return document.querySelector('.about').innerText;
-};
-export const getPlans = () => {
+}
+
+export function getPlans() {
   return document.querySelector('.plans').innerHTML;
-};
-export const getGoal = () => {
+}
+
+export function getGoal() {
   return document.querySelector('.goal').outerHTML;
-};
+}
 getTitle();
 getDescription();
 getPlans();
