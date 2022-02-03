@@ -1,5 +1,4 @@
-const listElem = document.querySelector('.list');
-const tasks = [
+export const tasks = [
   { text: 'Buy milk', done: false },
   { text: 'Pick up Tom from airport', done: false },
   { text: 'Visit party', done: false },
@@ -9,10 +8,10 @@ const tasks = [
 
 const renderTasks = (tasksList) => {
   // listElem.innerHTML = '';
-
+  const listElem = document.querySelector('.list');
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
-    .map(({ text, done }, index) => {
+    .map(({ text, done }) => {
       const listItemElem = document.createElement('li');
       listItemElem.classList.add('list__item');
       const checkbox = document.createElement('input');
