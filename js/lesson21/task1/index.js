@@ -1,6 +1,7 @@
-const listElem = document.querySelector('.list');
+'use strict'; // eslint-disable-line
+
 const tasks = [
-  { text: 'Buy milk', done: false },
+  { text: 'Buy milk', done: true },
   { text: 'Pick up Tom from airport', done: false },
   { text: 'Visit party', done: false },
   { text: 'Visit doctor', done: true },
@@ -8,31 +9,25 @@ const tasks = [
 ];
 
 const renderTasks = (tasksList) => {
-  // listElem.innerHTML = '';
+  const listItem = document.querySelector('.list');
 
-  const tasksElems = tasksList
+  const arrayOfElements = tasksList
     .sort((a, b) => a.done - b.done)
-    .map(({ text, done }, index) => {
-      const listItemElem = document.createElement('li');
-      listItemElem.classList.add('list__item');
-      const checkbox = document.createElement('input');
+    .map(({ text, done }) => {
+      const elementItem = document.createElement('li');
+      elementItem.classList.add('list__item');
+
+      const checkboxElement = document.createElement('input');
+      checkboxElement.setAttribute('type', 'checkbox');
 
       if (done) {
-        listItemElem.classList.add('list__item_done');
+        elementItem.classList.add('list__item_done');
       }
-
-      checkbox.setAttribute('type', 'checkbox');
-      // checkbox.setAttribute('data-id', index);
-      checkbox.checked = done;
-
-      checkbox.classList.add('list__item-checkbox');
-
-      listItemElem.append(checkbox, text);
-
-      return listItemElem;
+      elementItem.append(checkboxElement, text);
+      return elementItem;
     });
 
-  listElem.append(...tasksElems);
+  listItem.append(...arrayOfElements);
 };
 
 renderTasks(tasks);
