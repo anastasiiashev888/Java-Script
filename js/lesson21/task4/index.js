@@ -1,13 +1,13 @@
-const getTitle = () => {
+export const getTitle = () => {
   return document.querySelector('title').textContent;
 };
-const getDescription = () => {
+export const getDescription = () => {
   return document.querySelector('about').innerText;
 };
-const getPlans = () => {
+export const getPlans = () => {
   return document.querySelector('plans').innerHTML;
 };
-const getGoal = () => {
+export const getGoal = () => {
   return document.querySelector('goal').outerHTML;
 };
 getTitle();
