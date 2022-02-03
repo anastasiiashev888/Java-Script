@@ -1,4 +1,4 @@
-export const tasks = [
+const tasks = [
   { text: 'Buy milk', done: false },
   { text: 'Pick up Tom from airport', done: false },
   { text: 'Visit party', done: false },
@@ -7,7 +7,6 @@ export const tasks = [
 ];
 
 const renderTasks = (tasksList) => {
-  // listElem.innerHTML = '';
   const listElem = document.querySelector('.list');
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
@@ -21,13 +20,9 @@ const renderTasks = (tasksList) => {
       }
 
       checkbox.setAttribute('type', 'checkbox');
-      // checkbox.setAttribute('data-id', index);
       checkbox.checked = done;
-
       checkbox.classList.add('list__item-checkbox');
-
       listItemElem.append(checkbox, text);
-
       return listItemElem;
     });
 
