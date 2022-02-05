@@ -1,9 +1,9 @@
-export const setButton = (text) => {
-  if (typeof text !== 'string') {
+export const setButton = (buttonText) => {
+  if (typeof buttonText !== 'string') {
     return alert('Вы ввели не строку');
   }
-  const buttonText = document.querySelector('body');
-  buttonText.innerHTML = `<button> ${text} </button>`;
-  return buttonText;
+  const textForButton = document.querySelector('body');
+  textForButton.innerHTML = `<button>${buttonText}</button>`;
+  return textForButton;
 };
 setButton('button text');
